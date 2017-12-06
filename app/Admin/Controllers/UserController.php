@@ -76,7 +76,6 @@ class UserController extends Controller
         return Admin::grid(User::class, function (Grid $grid) {
 
             $grid->id('會員編號')->sortable();
-            $grid->column('username', '用戶名');
             $grid->column('name', '姓名');
             $grid->columns('email'); 
             
@@ -96,11 +95,9 @@ class UserController extends Controller
         return Admin::form(User::class, function (Form $form) {
 
             $form->model()->makeVisible('password');
-
             $form->tab('基本資料', function (Form $form) {
                 $form->display('id','會員編號');
-                $form->text('username', trans('admin.username'))->rules('required');
-                $form->text('name', trans('admin.name'))->rules('required');
+                $form->text('name','姓名')->rules('required');
                 //$form->image('avatar', trans('admin.avatar'));
 
                 $form->email('email')->rules('required');
@@ -141,7 +138,6 @@ class UserController extends Controller
 
             $form->tab('基本資料', function (Form $form) {
                 $form->display('id','會員編號');
-                $form->display('username', trans('admin.username'));
                 $form->text('name', trans('admin.name'))->rules('required');
                 //$form->image('avatar', trans('admin.avatar'));
 
