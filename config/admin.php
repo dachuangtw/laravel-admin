@@ -132,8 +132,23 @@ return [
     /*
      * @see https://adminlte.io/docs/2.4/layout
      */
-    //'skin' => 'skin-blue-light',
-    'skin' => 'skin-blue-light',
+     /*
+    |---------------------------------------------------------|
+    |SKIN OPTIONS   | skin-blue                               |
+    |               | skin-blue-light                         |
+    |               | skin-yellow                             |
+    |               | skin-yellow-light                       |
+    |               | skin-green                              |
+    |               | skin-green-light                        |
+    |               | skin-purple                             |
+    |               | skin-purple-light                       |
+    |               | skin-red                                |
+    |               | skin-red-light                          |
+    |               | skin-black                              |
+    |               | skin-black-light                        |
+    |---------------------------------------------------------|
+     */
+    'skin' => 'skin-red-light',
 
     /*
     |---------------------------------------------------------|
