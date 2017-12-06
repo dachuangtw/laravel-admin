@@ -11,7 +11,19 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+
+Route::get('/', function () {
+ 	return view('website.index');
+
+});
+Route::get('/account', function () {
+ 	return view('website.account');
 });
 
+Route::get('/register', function () {
+ 	return view('website.register');
+});
